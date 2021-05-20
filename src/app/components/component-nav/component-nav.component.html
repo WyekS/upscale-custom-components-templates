@@ -1,0 +1,9 @@
+<h5>Navigation component example</h5>
+<nav class="navbar navbar-expand-sm bg-light">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li *ngFor="let option of options" class="nav-item">
+            <a [routerLink]="[option[1]]" class="nav-link" href="#">{{ option[0] }}</a>
+        </li>
+    </ul>
+</nav>

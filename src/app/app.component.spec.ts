@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'custom-components-upscale'`, () => {
+  it(`should have as title 'custom-components-upp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('custom-components-upscale');
+    expect(app.title).toEqual('custom-components-upp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('custom-components-upscale app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('custom-components-upp app is running!');
   });
 });

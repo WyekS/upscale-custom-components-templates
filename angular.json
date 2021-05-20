@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "custom-components-upscale": {
+    "custom-components-upp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/custom-components-upscale",
+            "outputPath": "dist/custom-components-upp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "custom-components-upscale:build:production"
+              "browserTarget": "custom-components-upp:build:production"
             },
             "development": {
-              "browserTarget": "custom-components-upscale:build:development"
+              "browserTarget": "custom-components-upp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "custom-components-upscale:build"
+            "browserTarget": "custom-components-upp:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "custom-components-upscale"
+  "defaultProject": "custom-components-upp"
 }

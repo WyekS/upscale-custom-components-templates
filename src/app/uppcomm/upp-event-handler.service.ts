@@ -26,8 +26,8 @@ export class UppEventHandlerService {
 
     }
     // Ios
-    else if (wkit && wkit.messageHandlers && wkit.messageHandlers.upscaleHandler) {
-      wkit.messageHandlers.upscaleHandler.postMessage(JSON.stringify(event));
+    else if (wkit && wkit.messageHandlers && wkit.messageHandlers.uppHandler) {
+      wkit.messageHandlers.uppHandler.postMessage(JSON.stringify(event));
     }
     else {
       console.log("no send method detected");

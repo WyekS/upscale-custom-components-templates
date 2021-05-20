@@ -64,7 +64,7 @@ import 'zone.js';  // Included with Angular CLI.
  * APPLICATION IMPORTS
  */
 
-// Custom Windows for Upscale
+// Custom Windows for upp
 declare global {
     interface Window {
         webkit: any;

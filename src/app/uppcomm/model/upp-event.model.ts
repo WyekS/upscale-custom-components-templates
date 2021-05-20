@@ -8,5 +8,5 @@ export class UppEvent<T> {
     }
 }
 
-// Event handler to be able to receive events from SAP Upscale Commerce.
+// Event handler to be able to receive events from SAP upp Commerce.
 export const initEvent = new UppEvent('initialized', null);
