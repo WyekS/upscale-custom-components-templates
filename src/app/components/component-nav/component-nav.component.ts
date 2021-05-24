@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import Menu from 'src/app/model/menu.model';
+import { UppEventHandlerService } from 'src/app/uppcomm/upp-event-handler.service';
 
 @Component({
   selector: 'app-component-nav',
@@ -15,8 +16,10 @@ export class ComponentNavComponent implements OnInit {
     ['Show simple form component', '/example-form']
   ]).items;
 
-  constructor() { }
+  constructor(private uppEventHandlerService: UppEventHandlerService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.uppEventHandlerService.sendStartupEvents(200);
+  }
 
 }

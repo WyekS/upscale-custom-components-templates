@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreData } from 'src/app/model/store.model';
 import { ExternalDataService } from 'src/app/services/external-data.service';
+import { UppEventHandlerService } from 'src/app/uppcomm/upp-event-handler.service';
 
 @Component({
   selector: 'app-component-external-data',
@@ -16,14 +17,15 @@ export class ComponentExternalDataComponent implements OnInit {
   //connection:Subscription;
   //data$:Observable<StoreData[]>;
 
-  azul:string = 'bg-primary';
+  azul: string = 'bg-primary';
 
-  constructor(private externalDataService:ExternalDataService) { }
+  constructor(private externalDataService: ExternalDataService,
+    private uppEventHandlerService: UppEventHandlerService) { }
 
   ngOnInit(): void {
-
+    this.uppEventHandlerService.sendStartupEvents(800);
     this.data$ = this.externalDataService.getStores();
-    
+
     // Subscribe option
     /* this.connection = this.externalDataService.getStores().subscribe((data) => {
       this.stores = data['records'];

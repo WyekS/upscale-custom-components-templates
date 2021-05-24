@@ -22,7 +22,7 @@ export class ComponentTableComponent implements OnInit {
   constructor(private uppEventHandlerService: UppEventHandlerService) { }
 
   ngOnInit(): void {
-    this.uppEventHandlerService.sendStartupEvents(200);
+    this.uppEventHandlerService.sendStartupEvents(300);
     this.initData();
   }
 
