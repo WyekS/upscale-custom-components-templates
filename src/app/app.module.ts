@@ -17,6 +17,7 @@ import { ComponentNavComponent } from './components/component-nav/component-nav.
 // Services
 import { UppEventHandlerService } from './uppcomm/upp-event-handler.service';
 import { ExternalDataService } from './services/external-data.service';
+import { ComponentFooterComponent } from './components/component-footer/component-footer.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ExternalDataService } from './services/external-data.service';
     ComponentFormComponent,
     ComponentExternalDataComponent,
     ComponentExternalDataAuxComponent,
-    ComponentNavComponent
+    ComponentNavComponent,
+    ComponentFooterComponent
   ],
   imports: [
     BrowserModule,
