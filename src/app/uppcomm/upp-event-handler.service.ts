@@ -15,7 +15,7 @@ export class UppEventHandlerService {
   }
 
   private sendEvent(event: any, origin = "*") {
-    let wkit = (window).webkit;
+    let webkit = (window).webkit;
     // Web
     if (window.parent !== window) {
       window.parent.postMessage(event, origin);
@@ -23,11 +23,10 @@ export class UppEventHandlerService {
     // Android
     else if ((window).Android) {
       (window).parent.postMessage(event, origin);
-
     }
     // Ios
-    else if (wkit && wkit.messageHandlers && wkit.messageHandlers.uppHandler) {
-      wkit.messageHandlers.uppHandler.postMessage(JSON.stringify(event));
+    else if (webkit && webkit.messageHandlers && webkit.messageHandlers.uppHandler) {
+      webkit.messageHandlers.uppHandler.postMessage(JSON.stringify(event));
     }
     else {
       console.log("no send method detected");

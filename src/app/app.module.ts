@@ -18,6 +18,7 @@ import { ComponentNavComponent } from './components/component-nav/component-nav.
 import { UppEventHandlerService } from './uppcomm/upp-event-handler.service';
 import { ExternalDataService } from './services/external-data.service';
 import { SimilarproductpreferencesComponent } from './components/similarproductpreferences/similarproductpreferences.component';
+import { ComponentFooterComponent } from './components/component-footer/component-footer.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SimilarproductpreferencesComponent } from './components/similarproductp
     ComponentExternalDataComponent,
     ComponentExternalDataAuxComponent,
     ComponentNavComponent,
-    SimilarproductpreferencesComponent
+    SimilarproductpreferencesComponent,
+    ComponentFooterComponent
   ],
   imports: [
     BrowserModule,

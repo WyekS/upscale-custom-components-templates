@@ -1,4 +1,672 @@
-/* Body reduce to 50% to simulate a embebed component in SAP Upscale */
-body {
-    width: 50%;
+.footer {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+}
+
+.footer__logo {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    display: block;
+    margin: 0 11.3vw 0 0;
+    max-width: 128px;
+}
+
+.footer__logo-image {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: auto;
+    max-width: 100%;
+    outline: 0;
+    width: 100%;
+}
+
+.footer__container {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__inner { 
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    position: relative;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.footer__logo {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    display: block;
+    margin: 0 11.3vw 0 0;
+    max-width: 128px;
+}
+
+.newsletter {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 0;
+    min-width: 280px;
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+    width: 26.875vw;
+}
+
+.newsletter-title {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    font-family: NHaasGroteskDSPro-55Rg,sans-serif;
+    font-size: 14px;
+    letter-spacing: normal;
+    text-decoration: none;
+    margin-bottom: 51px;
+    padding-left: 7px;
+}
+
+.newsletter__title-text {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    font-family: NHaasGroteskDSPro-55Rg,sans-serif;
+    font-size: 14px;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter__button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-direction: normal;
+    box-sizing: border-box;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: none;
+    background: 0 0;
+    -webkit-appearance: button;
+    font-style: normal;
+    font-weight: 400;
+    min-width: 200px;
+    background-color: #c33;
+    color: #fff;
+    letter-spacing: 0;
+    text-decoration: none;
+    transition: all .2s;
+    overflow: visible;
+    text-align: center;
+    text-transform: capitalize;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0;
+    padding: 14px 23px;
+    height: 50px;
+    font-family: NHaasGroteskDSPro-55Rg;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 7px;
+    padding-bottom: 12px;
+    padding-top: 14px;
+}
+
+.contact-form {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter__form {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter__input {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-direction: normal;
+    box-sizing: border-box;
+    overflow: visible;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+    border: 1px solid #f6f6f6;
+    max-width: 100%;
+    border-radius: 0;
+    vertical-align: baseline;
+    margin: 0;
+    font-family: NHaasGroteskDSPro-55Rg,sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: 400;
+    background: 0 0;
+    border-color: #7f7f7f;
+    border-style: solid;
+    border-width: 0 0 1px;
+    padding: 0 0 9px;
+    margin-bottom: 17px;
+    margin-left: 7px;
+    padding-left: 0;
+    width: calc(100% - 7px);
+    -webkit-appearance: none;
+    color: #fff!important;
+}
+
+.footer__nav {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin-bottom: 0;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+}
+
+.footer__nav-title {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-family: NHaasGroteskDSPro-55Rg;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    line-height: 22px;
+    border-top: none;
+    cursor: text;
+    padding: 0;
+}
+
+.footer__icons {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 230px;
+    position: absolute;
+    top: 142px;
+    width: 15%;
+    left: 120px;
+}
+
+.footer__nav-group {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-left: 7.5vw;
+}
+
+.footer__icons-list {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.footer__icons-link {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    touch-action: manipulation;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: .2s ease-in-out;
+}
+
+.svg-icon {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    list-style-type: none;
+    color: #fff;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 14px;
+    width: auto;
+}
+
+.footer__icons-item {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: fit-content;
+    width: 20px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+.footer__nav-link {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    list-style-type: none;
+    pointer-events: auto;
+    box-sizing: border-box;
+    background-color: transparent;
+    touch-action: manipulation;
+    margin: 0;
+    color: #fff;
+    font-family: NHaasGroteskDSPro-55Rg,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0;
+    transition: color .2s ease-in-out;
+}
+
+.footer__nav-list {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transition: all .3s ease-in-out;
+    text-align: left;
+    margin-top: 25px;
+    max-height: none;
+    overflow: visible;
+    pointer-events: auto;
+}
+
+.footer__nav-item {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    list-style-type: none;
+    pointer-events: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: .3s ease-in-out;
+    opacity: 1;
+    transition-delay: 20ms;
+}
+
+.footer__nav-icon {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #7f7f7f;
+    letter-spacing: 0;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-family: NHaasGroteskDSPro-55Rg;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: text;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    transform-origin: center;
+    transition: .3s ease-in-out;
+    display: none;
+}
+
+.footer__meta {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #2d2d2d;
+    color: #949494;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 11px;
+    line-height: 1.81818;
+    margin-top: 148px;
+    -webkit-box-ordinal-group: 5;
+    order: 4;
+    padding-left: 120px;
+    padding-right: 120px;
+    flex-basis: calc(100% + 240px);
+    margin-left: -120px;
+    margin-right: -120px;
+}
+
+.footer__link {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.81818;
+    -webkit-box-direction: normal;
+    box-sizing: border-box;
+    background-color: transparent;
+    touch-action: manipulation;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+.footer__copyright {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    color: #949494;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1em;
+    line-height: 1.3;
+    border-top: 0;
+    margin: 0;
+    padding: 25px 0 28px;
+}
+
+
+.icon-fallback-text {
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: NHaasGroteskTXPro-65Md,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0;
+    list-style-type: none;
+    color: #fff;
+    box-sizing: border-box;
+    position: absolute!important;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
 }
