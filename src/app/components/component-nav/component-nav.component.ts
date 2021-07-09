@@ -16,7 +16,6 @@ export class ComponentNavComponent implements OnInit {
     ['Show simple form component', '/example-form'],
     ['Show footer component', '/footer'],
     ['Show example preference', '/example-product-preference'],
-    ['Show footer component', '/footer']
   ]).items;
 
   constructor(private uppEventHandlerService: UppEventHandlerService) { }

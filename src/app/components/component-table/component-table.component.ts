@@ -30,7 +30,7 @@ export class ComponentTableComponent implements OnInit {
     window.addEventListener('message', (event: UppEvent<ProductData>) => {
         // Check that the type is as expected
         if (event.type == '') {
-          this.products.push(event.data);
+          this.products.push(event.data.keys);
         }
       }, false);
   }

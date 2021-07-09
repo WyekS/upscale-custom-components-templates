@@ -1,8 +1,11 @@
 export class UppEvent<T> {
     type: string;
-    data: T;
+    data!: {
+        eventType: string;
+        keys: T;
+    };
 
-    constructor(type: string, data: T) {
+    constructor(type: string, data: any) {
         this.type = type;
         this.data = data;
     }
