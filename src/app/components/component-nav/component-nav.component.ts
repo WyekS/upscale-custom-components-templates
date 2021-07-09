@@ -13,7 +13,9 @@ export class ComponentNavComponent implements OnInit {
   options: Array<[string, string]> = new Menu([
     ['Show table component', '/example-table'],
     ['Show external data component', '/example-external-data'],
-    ['Show simple form component', '/example-form']
+    ['Show simple form component', '/example-form'],
+    ['Show footer component', '/footer'],
+    ['Show example preference', '/example-product-preference']
   ]).items;
 
   constructor(private uppEventHandlerService: UppEventHandlerService) { }
