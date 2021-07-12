@@ -1,6 +1,6 @@
 export class UppEvent<T> {
     type: string;
-    data!: {
+    data: {
         eventType: string;
         keys: T;
     };
