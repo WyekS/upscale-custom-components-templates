@@ -3,68 +3,70 @@ import { UppEventHandlerService } from '../../uppcomm/upp-event-handler.service'
 import { UppEvent } from '../../uppcomm/model/upp-event.model';
 import { ComponentContext } from 'src/app/model/componentContext.model';
 import { ExternalDataService } from '../../services/external-data.service';
-import { LocalStorageService } from '../../services/LocalStorage.service';
+import { LocalStorageService } from '../../services/local-storage.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-similarproductpreferences',
   templateUrl: './similarproductpreferences.component.html',
-  styleUrls: ['./similarproductpreferences.component.css']
+  styleUrls: ['./similarproductpreferences.component.css'],
 })
 export class SimilarproductpreferencesComponent implements OnInit {
   context!: ComponentContext;
-  categoryLoaded: any;
   accessToken: any;
-  productsInSellingTree = [];
+  productsInSellingTree!: any[];
+  
   constructor(
     private uppEventHandlerService: UppEventHandlerService,
     private externalDataService: ExternalDataService,
-    private localStorage: LocalStorageService 
-    ) {}
+    private localStorage: LocalStorageService
+  ) {
+    this.accessToken = this.localStorage.getItem('AccessToken');
+  }
 
   ngOnInit(): void {
-    this.accessToken = this.localStorage.getItem('AccessToken');
     this.uppEventHandlerService.sendStartupEvents(300);
     this.initData();
   }
 
-  initData() {
+  private initData() {
+    if (environment.production) {
+      window.addEventListener(
+        'message',
+        (event: UppEvent<ComponentContext>) => {
+          console.log('Incoming event ', event);
 
-    // this.context = event.data.keys;
-    this.externalDataService.getProductsInSellingTree("568006af-7ef6-4788-bbbe-508756004428",this.accessToken).subscribe(
-      (response: any)=>{
-        console.log("get products from selling tree fired")
-        console.log(response);
+          if (event.data.eventType == 'component_context') {
+            // fetch products in the parent category of the product that is added to cart
+            this.context = event.data.keys;
+            this.initProductsBySellingTree(
+              this.context.sellingTreeId,
+              this.context.language
+            );
+          }
+        },
+        true
+      );
+    } else {
+      this.initProductsBySellingTree(
+        environment.mockedIds.sellingTreeId,
+        environment.mockedIds.language
+      );
+    }
+  }
+
+  private initProductsBySellingTree(sellingTree: string, language: string) {
+    this.externalDataService
+      .getProductsInSellingTree(sellingTree, this.accessToken, language)
+      .subscribe((response: any) => {
+        console.log('get products from selling tree fired');
         this.productsInSellingTree = response.content;
-        console.log(this.productsInSellingTree)
-      }
-    )
-
-    window.addEventListener(
-      'message',
-      (event: UppEvent<ComponentContext>) => {
-        console.log('Incoming event ', event);
-        if (event.data.eventType == 'component_context') {
-          // fetch products in the parent category of the product that is added to cart
-          this.context = event.data.keys;
-          this.externalDataService.getProductsInSellingTree(this.context,this.accessToken).subscribe(
-            (response: any)=>{
-              console.log("get products from selling tree fired")
-              console.log(response);
-              this.productsInSellingTree = response.content;
-              console.log(this.productsInSellingTree)
-            }
-          )
-        }
-        if (event.data.eventType == 'browse_category_loaded') {
-          this.categoryLoaded = event.data.keys;
-        }
-      },
-      true
-    );
+        console.log(this.productsInSellingTree);
+      });
   }
 }
 
 export interface Product {
-  productCode: string,
-  description: string
-};
+  productCode: string;
+  description: string;
+}

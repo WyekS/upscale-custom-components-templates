@@ -2,11 +2,21 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const tenantUrl = 'https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com';
+
+/*
+ * For local use, put the necesary identifier from your Upcale tenant
+ */
 export const environment = {
   production: false,
+  mockedIds: { 
+    language: 'en-US',
+    sellingTreeId: '568006af-7ef6-4788-bbbe-508756004428'
+  },
   externalMockDataUrl: 'https://www.w3schools.com/angular/customers.php',
-  requestTokenUrl: "https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com/oauth2/token",
-  productContentUrl: "https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com/product-content/sellingtrees/"
+  tenantUrl: tenantUrl,
+  requestTokenUrl: tenantUrl + '/oauth2/token',
+  productsBySellingTree: tenantUrl + '/product-content/sellingtrees/${sellingTreeId}/products'
 };
 
 /*
