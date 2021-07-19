@@ -21,6 +21,7 @@ import { SimilarproductpreferencesComponent } from './components/similarproductp
 import { ComponentFooterComponent } from './components/component-footer/component-footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { StoreData } from '../model/store.model';
 
@@ -9,9 +9,10 @@ import { StoreData } from '../model/store.model';
   providedIn: 'root'
 })
 export class ExternalDataService {
-
   stores: Array<StoreData> = [];
-
+  requestTokenUrl = "https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com/oauth2/token";
+  productContentUrl = "https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com/product-content/sellingtrees/";
+  productsUrl = "/products";
   constructor(private httpSrv: HttpClient) { }
 
   getData() {
@@ -78,6 +79,31 @@ export class ExternalDataService {
         });
         return stores;
       })).toPromise();
+  }
+
+  requestToken() {
+    return this.httpSrv.post(this.requestTokenUrl, new HttpParams()
+      .set('grant_type', 'client_credentials'), { 
+      headers: new HttpHeaders()
+      .set('Content-Type', 'application/x-www-form-urlencoded')
+      .set("Authorization", "Basic " + window.btoa("87a4d343a38629fa:42931d16232ca69c287931bd06aeffc0")) 
+    });
+  }
+
+  getProductsInSellingTree(sellingTreeId: any, accessToken: any) {
+    var paramsObj = new HttpParams()
+    .set('active', 'true')
+    .set('published','true')
+    .set('pageNumber','1')
+    .set('pageSize','20')
+    .set('fields', 'FULL')
+    var headersObj = new HttpHeaders()
+    .set("Authorization", "Bearer " +accessToken)
+    .set("accept", "application/json")
+    return this.httpSrv.get(this.productContentUrl+ sellingTreeId+ this.productsUrl , {
+      headers: headersObj,
+      params: paramsObj
+    })
   }
 
 }

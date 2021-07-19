@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  externalMockDataUrl: 'https://www.w3schools.com/angular/customers.php'
+  externalMockDataUrl: 'https://www.w3schools.com/angular/customers.php',
+  requestTokenUrl: "https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com/oauth2/token",
+  productContentUrl: "https://eap-philos-it-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com/product-content/sellingtrees/"
 };
 
 /*
@@ -14,4 +16,5 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+// import 'zone.js/plugins/zone-error';
+// Included with Angular CLI.
