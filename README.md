@@ -5,35 +5,90 @@ The goal of this project is to learn how to customize SAP Upscale with extension
 Before implement this project is recommended see the next video: [🎞️](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/f542f9dc2d744b28b471ca6f044d832c.html)
 
 
-Some components are:
-- A simple table component that must obtain data from an Upscale event, it is necessary to implement it as follows:
-  - Define the same type event that extension subscribed in `component-table.component.ts`:
+## Implementation of a new component
+
+1. Extend AbstractComponent class
+```ts
+[...]
+import { AbstractComponent } from '../abstract.component';
+[...]
+export class SimilarProductPreferencesComponent
+  extends AbstractComponent
+  implements OnInit
+{
+  [...]
+```
+
+2. Create a constructor: It's important to call to super method and pass the Upscale event handler service, the zone and the initial height the container will have.
+```ts
+  constructor(
+    public zone: NgZone,
+    public uppEventHandlerService: UppEventHandlerService,
+    private _localStorage: LocalStorageService // Optional
+  ) {
+    super(zone, uppEventHandlerService, 0);
+  }
+```
+> **Note** Declare LocalStorageService is optional, use it when you want keep or retrieve som information from him
+
+3. Create the following attribute for the class and its corresponding view: 
+```ts
+  @ViewChild('container') container: ElementRef | undefined;
+```
+
+```html
+<div #container class="grid-container">
+  [...]
+</div>
+```
+
+4. Finally, it calls to `perform` method after view init. This method after view initialisation. This function applies events to send the height of the inner elements or when the `container` is resized.
+
+```ts
+  ngAfterViewInit() {
+    this.perform(this.container);
+  }
+```
+
+## Manage Events
+
+The following example contains how to manage an event in TypeScript
 
 ```ts
 initData() {
-    window.addEventListener('message', (event: UppEvent<ProductData>) => {
+    window.addEventListener('message', (event: UppEvent<ComponentContextData>) => {
         // Check that the type is as expected
-        if (event.type == '<event-type>') {
-          this.products.push(event.data);
+        if (event.type == EVENT_COMPONENT_CONTEXT) {
+          // Do something
         }
     }, false);
 }
 ```
 
-  - Build a model class to map the inbound data from event and parametrized `UppEvent<T>`
+Recommendations:
+- Build a model class to map the inbound data from event
+- Parametrized `UppEvent<T>`
+- Use declared contants or create new ones in `src/app/constants`
 
-- A contact form component to input data and manage it like you want
 
-- A component to consume a external URL and show the information like cards
+## Examples of components
 
-- A component nav that you can use to navigate throught the differents components
+- `similar-product-preferences`: This component receives an event called `component_context` from Upscale and then performs a request to Upscale to get the first 5 products of the same selling tree (it's a model in Upscale).
+
+- `navigation-menu` component: you can use to navigate throught the differents components within this application. 
+
+> **Note**: Use this component to test application indepently of Upscale, you don't configure it as extension in the Workbench
+
+- `simple-form` component: simple example form 
+
+- `external-data` component: it consumes a external URL and show the information in card style
+
 
 Finally, you must configure extension Upscale to consume one of the next URL's:
-- `/example-table`
 - `/example-form`
-- `/example-external-data` 
+- `/example-external-data`
+- `/example-product-preference` 
 
-> Note: Use the navigation component to test application indepently de Upscale, you don't configure it for the extension with the current examples links
 
 ## References SAP Upscale
 

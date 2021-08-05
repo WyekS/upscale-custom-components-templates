@@ -1,0 +1,19 @@
+<div #container class="grid-container" >
+    <input type="radio" name="position" checked />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+
+    <main id="carousel" *ngIf="productsInSellingTree" class="similar-row">
+        <div *ngFor="let product of productsInSellingTree;let pos = index;" class="item">
+            <strong>{{ product.name }}</strong>
+            <p>{{ product.price.sellingPrice }} €</p>
+            <div >
+                <div class="img" style="background-position: center center; background-size: contain; background-image: url('{{ product.media[0].thumbnail }}');">
+                    <!--image like in Upscale method-->
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentNavComponent } from './component-nav.component';
+import { ExternalDataAuxComponent } from './external-data-aux.component';
 
-describe('ComponentNavComponent', () => {
-  let component: ComponentNavComponent;
-  let fixture: ComponentFixture<ComponentNavComponent>;
+describe('ExternalDataAuxComponent', () => {
+  let component: ExternalDataAuxComponent;
+  let fixture: ComponentFixture<ExternalDataAuxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComponentNavComponent ]
+      declarations: [ ExternalDataAuxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComponentNavComponent);
+    fixture = TestBed.createComponent(ExternalDataAuxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

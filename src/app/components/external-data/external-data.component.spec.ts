@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentFormComponent } from './component-form.component';
+import { ExternalDataComponent } from './external-data.component';
 
-describe('ComponentFormComponent', () => {
-  let component: ComponentFormComponent;
-  let fixture: ComponentFixture<ComponentFormComponent>;
+describe('ExternalDataComponent', () => {
+  let component: ExternalDataComponent;
+  let fixture: ComponentFixture<ExternalDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComponentFormComponent ]
+      declarations: [ ExternalDataComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComponentFormComponent);
+    fixture = TestBed.createComponent(ExternalDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
