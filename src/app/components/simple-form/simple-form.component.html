@@ -1,0 +1,36 @@
+<div #container class="grid-container">
+  <h5>Contact Component</h5>
+  <hr />
+  <form>
+    <div class="form-group">
+      <label>First Name</label>
+      <input
+        class="form-control"
+        type="text"
+        name="firstname"
+        [(ngModel)]="contact.firstname"
+      />
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input
+        class="form-control"
+        type="text"
+        name="lastname"
+        [(ngModel)]="contact.lastname"
+      />
+    </div>
+    <div class="form-group">
+      <label>Phone</label>
+      <input
+        class="form-control"
+        type="text"
+        name="text"
+        [(ngModel)]="contact.phone"
+      />
+    </div>
+    <button class="btn btn-primary float-right" (click)="contactAction()">
+      Contact
+    </button>
+  </form>
+</div>
