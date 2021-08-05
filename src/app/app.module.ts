@@ -8,30 +8,26 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { AppComponent } from './app.component';
-import { ComponentFormComponent } from './components/component-form/component-form.component';
-import { ComponentTableComponent } from './components/component-table/component-table.component';
-import { ComponentExternalDataComponent } from './components/component-external-data/component-external-data.component';
-import { ComponentExternalDataAuxComponent } from './components/component-external-data-aux/component-external-data-aux.component';
-import { ComponentNavComponent } from './components/component-nav/component-nav.component';
+import { SimpleFormComponent } from './components/simple-form/simple-form.component';
+import { ExternalDataComponent } from './components/external-data/external-data.component';
+import { ExternalDataAuxComponent } from './components/external-data-aux/external-data-aux.component';
+import { NavigationMenuComponent } from './components/navigation-menu/navigation-menu.component';
 
 // Services
 import { UppEventHandlerService } from './uppcomm/upp-event-handler.service';
 import { ExternalDataService } from './services/external-data.service';
-import { SimilarproductpreferencesComponent } from './components/similarproductpreferences/similarproductpreferences.component';
-import { ComponentFooterComponent } from './components/component-footer/component-footer.component';
+import { SimilarProductPreferencesComponent } from './components/similar-product-preferences/similar-product-preferences.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentTableComponent,
-    ComponentFormComponent,
-    ComponentExternalDataComponent,
-    ComponentExternalDataAuxComponent,
-    ComponentNavComponent,
-    SimilarproductpreferencesComponent,
-    ComponentFooterComponent
+    SimpleFormComponent,
+    ExternalDataComponent,
+    ExternalDataAuxComponent,
+    NavigationMenuComponent,
+    SimilarProductPreferencesComponent,
   ],
   imports: [
     BrowserModule,

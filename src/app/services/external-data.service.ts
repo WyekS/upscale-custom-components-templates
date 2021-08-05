@@ -112,7 +112,7 @@ export class ExternalDataService {
       .set('active', 'true')
       .set('published', 'true')
       .set('pageNumber', '1')
-      .set('pageSize', '20')
+      .set('pageSize', '5')
       .set('fields', 'FULL');
     var headersObj = new HttpHeaders()
       .set('Authorization', 'Bearer ' + accessToken)

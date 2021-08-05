@@ -1,4 +1,4 @@
-export class ComponentContext {
+export class ComponentContextData {
   sellingTreeId: string;
   experienceId: string;
   editionId: string;

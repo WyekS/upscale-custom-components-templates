@@ -3,6 +3,10 @@ const tenantUrl =
 
 export const environment = {
   production: true,
+  mockedIds: {
+    language: '',
+    sellingTreeId: '',
+  },
   externalMockDataUrl: 'https://www.w3schools.com/angular/customers.php',
   tenantUrl: tenantUrl,
   requestTokenUrl: tenantUrl + '/oauth2/token',
