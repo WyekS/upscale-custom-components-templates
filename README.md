@@ -1,4 +1,4 @@
-# Custom Components Upp
+# Custom Components Templates for SAP Upscale
 
 The goal of this project is to learn how to customize SAP Upscale with extensions. Services have been prepared to handle event data to user-defined properties, SAP help tips have been included, a distinction has been made for different platforms (Android, iOS...) and several example components have been added to customize SAP Upscale.
 
